@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 
 int suma(int a, int b){
@@ -11,10 +11,14 @@ int resta(int a, int b){
 }
 
 int main(){
-	int length;
-	scanf("%i", &length);
+    int num1 = 12;
+    int num2 = 3;
 
-	int office = pow(2,length);
-	printf("%i", office);
-	return 0;
+    int op1 = suma(num1, num2);
+    printf("%i", op1);
+    int op2 = resta(num1, num2);
+    printf("%i", op2);
+
+
+    return 0;
 }
