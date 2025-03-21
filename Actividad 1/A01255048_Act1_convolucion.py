@@ -7,7 +7,7 @@ Alumno: Jonathan Uziel Medina Rodríguez (A01255048)
 
 Docente: Baldomero Olvera Villanueva
 
-Fecha: 20/03/2025
+Fecha: 21/03/2025
 
 Descripción: Programa que aplica filtros de convolución a una imagen.
 """
@@ -85,11 +85,9 @@ if __name__ == "__main__":
         matriz3 = convolucion(imagen, filtro3)
 
         # Matriz de mi propio filtro.
-        filtro4 = np.array([[-20,-20,-20,-20,-20],
-                            [-2,10,10,10,-2], 
-                            [-2,10,-30,10,-2],
-                            [-2,10,10,10,-2],
-                            [-20,-20,-20,-20,-20]])  
+        filtro4 = np.array([[-1,-0.5,-1], 
+                            [-2,0.33,-2],
+                            [-1,-0.5,-1]])    
         
         # Matriz de convolución 4.
         matriz4 = convolucion(imagen, filtro4)
@@ -115,7 +113,7 @@ if __name__ == "__main__":
         # Mostrar la convolución de la imagen con el filtro 4 en la 4ta. posición.
         plt.subplot(2, 2, 4)
         plt.axis("off")
-        plt.imshow(matriz3, cmap="gray", )
+        plt.imshow(matriz4, cmap="gray", )
         plt.title("Convolución de la Imagen con mi Propio Filtro")
 
         # Mostrar las imágenes.
