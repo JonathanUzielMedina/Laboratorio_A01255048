@@ -7,7 +7,7 @@ Alumno: Jonathan Uziel Medina Rodríguez (A01255048)
 
 Docente: Baldomero Olvera Villanueva
 
-Fecha: 20/03/2924
+Fecha: 20/03/2025
 
 Descripción: Programa que aplica filtros de convolución a una imagen.
 """
