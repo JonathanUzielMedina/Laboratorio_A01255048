@@ -6,4 +6,5 @@
   <li>Las entradas que se reciben son la imagen y la matriz del filtro.</li>
   <li>Los filtros que se manejan en este código son el de extensión de punto, suavizado 3x3, nitidez 3x3 y uno que yo mismo creé.</li>
   <li>Al final se muestran 4 versiones de la imagen, donde a cada una se le aplica un filtro.</li>
+  <li><strong>IMPORTANTE:</strong> Es necesario tener las librerías: OpenCV, Matplotlib, OS y Numpy.</li>
 </ul>
