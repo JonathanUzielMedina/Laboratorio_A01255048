@@ -7,7 +7,7 @@ Alumno: Jonathan Uziel Medina Rodríguez (A01255048)
 
 Docente: Baldomero Olvera Villanueva
 
-Fecha: 20/03/2025
+Fecha: 21/03/2025
 
 Descripción: Programa que aplica filtros de convolución a una imagen con padding incluido.
 """
@@ -19,28 +19,26 @@ import matplotlib.pyplot as plt
 
 # Función para agregar un filtro de convolución a una imagen. Complejidad O(n^4) al tener 4 iteraciones anidadas.
 def convolucion(imagen, filtro):
-    filaImg, colImg = imagen.shape                                           # Tamaño de la imagen (m filas, n columnas)
-    filaF, colF = filtro.shape                                               # Tamaño del filtro/kernel (k filas, l columnas)
+    filaImg, colImg, = imagen.shape                                                 # Tamaño de la imagen (m filas, n columnas).
+    filaF, colF = filtro.shape                                                      # Tamaño del filtro/kernel (k filas, l columnas).
 
-    padding_y = int((filaF - 1)/2)                                           # Padding en el eje Y (altura)
-    padding_x = int((colF - 1)/2)                                            # Padding en el eje X (ancho)
+    padding_y = int((filaF - 1)/2)                                                  # Padding en el eje Y (altura).
+    padding_x = int((colF - 1)/2)                                                   # Padding en el eje X (ancho).
 
-    matriz = np.zeros((filaImg + (padding_y*2), colImg + (padding_x*2)))     # Matriz de ceros con padding añadido.
+    matriz = np.zeros(imagen.shape)                                                 # Matriz resultante de ceros.
+
+    imagenPadding = np.zeros((filaImg + (padding_y*2), colImg + (padding_x*2)))     # Matriz de ceros de la imagen con padding añadido.
     
-    matriz[padding_y:matriz.shape[0] - padding_y,                            # Parte de la matriz es tomada por toda la imagen.
-           padding_x:matriz.shape[1] - padding_x] = imagen
+    imagenPadding[padding_y:imagenPadding.shape[0] - padding_y,                     # Parte de la matriz es tomada por toda la imagen.
+                  padding_x:imagenPadding.shape[1] - padding_x] = imagen
 
-    # Recorrer las filas de la imagen y del filtro.
-    for u in range(filaImg - filaF):
-        # Recorrer las columnas de la imagen y del filtro.
-        for v in range(colImg - colF):
-            # LLevar a cabo la convolución / sumatoria del producto de cada celda del filtro y de la imagen.
-            operacion = 0
-            for i in range(filaF - 1):
-                for j in range(colF - 1):
-                    operacion += imagen[u + i][v + j] * filtro[filaF - 1 - i][colF - 1 - j]
-
-            matriz[u][v] = operacion # Se guarda la convolución de la celda en la matriz.
+    """
+    Se recorre cada columna de cada fila para llevara cabo la operación de convolución:
+    sumatoria del producto de cada celda del filtro y de la imagen.
+    """
+    for i in range(filaImg):
+        for j in range(colImg):
+            matriz[i][j] = np.sum(imagenPadding[i:i + filaF, j:j + colF] * filtro)
 
     return matriz # Retornar matriz
 
