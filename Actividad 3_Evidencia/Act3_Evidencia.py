@@ -3,7 +3,8 @@ Herramientas Computacionales: El Arte de la Programación
 
 Evidencia de Proyecto
 
-Alumno: Jonathan Uziel Medina Rodríguez (A01255048)
+Equipo: Jonathan Uziel Medina Rodríguez (A01255048), Pablo Ernesto Cruz Moreno (A01255437) y
+        Miguel de Jesús Degollado Macías (A01255388@).
 
 Docente: Baldomero Olvera Villanueva
 
