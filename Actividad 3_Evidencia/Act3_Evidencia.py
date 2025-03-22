@@ -12,6 +12,7 @@ Fecha: 23/03/2025
 
 Descripción: Programa que aplica filtros de convolución a una radiografía para detectar cuerpos extraños, enfermedades respiratorias, etc.
 """
+
 # Librerías
 import numpy as np
 import cv2
@@ -57,16 +58,15 @@ if __name__ == "__main__":
 
     else:
 
-        colorMapArr = ["bone", "afmhot", "pink", "gray"]      # Mapas de color que admite el programa 
-        colorMap = ""                                           # Mapa de color elegido por el usuario
+        colorMapArr = ["bone", "afmhot", "gray"]      # Mapas de color que admite el programa 
+        colorMap = ""                                 # Mapa de color elegido por el usuario
 
         # Verificar que el usuario ingrese un mapa de color válido.
         while colorMap not in colorMapArr:
             colorMap = input("\nIngrese el nombre del mapa de color que quiera utilizar:\n"
                             "\t1. bone\n"
                             "\t2. afmhot\n"
-                            "\t3. pink\n"
-                            "\t4. gray\n"
+                            "\t3. gray\n"
                             "____________________________________________________________\n"
                             "Opción: ")
             
@@ -94,22 +94,22 @@ if __name__ == "__main__":
         
         # Sobel vertical.
         sobel = np.array([[-1, -2, -1],
-                          [ -2, 1,  2],
+                          [ -2, 9,  2],
                           [ 1,  2,  1]])
         
         # Nitidez 3x3
-        nitidez = np.array([[1, 1, 1],
-                            [1, 7, 1],
-                            [1, 1, 1]])
+        nitidez = np.array([[0, -1, 0],
+                            [-1, 9,-1],
+                            [0, -1, 0]])
         
         # Matrices de convolución con los filtros aplicados.
-        mascara1 = convolucion(imagenEG, scharr)
+        mascara1 = convolucion(imagenEG, nitidez)
         print("\nMáscara #1 aplicada.")
-        mascara2 = convolucion(mascara1, bordes)
+        mascara2 = convolucion(mascara1, scharr)
         print("\nMáscara #2 aplicada.")
-        mascara3 = convolucion(mascara2, sobel)
+        mascara3 = convolucion(mascara2, bordes)
         print("\nMáscara #3 aplicada.")
-        mascara4 = convolucion(mascara3, nitidez)
+        mascara4 = convolucion(mascara3, sobel)
         print("\nMáscara #4 aplicada.")
 
         time.sleep(1)
