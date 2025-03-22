@@ -1,7 +1,7 @@
 """
 Herramientas Computacionales: El Arte de la Programación
 
-Actividad 1: Implementación de Convolución
+Evidencia de Proyecto
 
 Alumno: Jonathan Uziel Medina Rodríguez (A01255048)
 
@@ -9,7 +9,7 @@ Docente: Baldomero Olvera Villanueva
 
 Fecha: 23/03/2025
 
-Descripción: Programa que aplica filtros de convolución a una imagen con padding incluido.
+Descripción: Programa que aplica filtros de convolución a una radiografía para detectar cuerpos extraños, enfermedades respiratorias, etc.
 """
 # Librerías
 import numpy as np
