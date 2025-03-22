@@ -18,7 +18,7 @@ import os
 import time
 import matplotlib.pyplot as plt
 
-# Función para agregar un filtro de convolución a una imagen. Complejidad O(n^4) al tener 4 iteraciones anidadas.
+# Función para agregar un filtro de convolución a una imagen. Complejidad O(n^2) al tener 2 iteraciones anidadas.
 def convolucion(imagen, filtro):
     filaImg, colImg, = imagen.shape                                                 # Tamaño de la imagen (m filas, n columnas).
     filaF, colF = filtro.shape                                                      # Tamaño del filtro/kernel (k filas, l columnas).
