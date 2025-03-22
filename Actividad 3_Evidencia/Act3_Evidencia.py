@@ -82,11 +82,6 @@ if __name__ == "__main__":
         # La imagen se convierte a blanco y negro (escala de grises). 
         imagenEG = cv2.cvtColor(imagen, cv2.COLOR_RGB2GRAY)
 
-        # Matriz del filtro de extensión de punto.
-        extpt = np.array([[-0.627, -0.352, -0.627],
-                          [-0.352, 1.923, -0.352],
-                          [-0.627, -0.352, -0.627]])
-
         # Matriz de bordes modifcado.
         bordes = np.array([[-1, 0, -1],
                            [-1, -3, -1],
