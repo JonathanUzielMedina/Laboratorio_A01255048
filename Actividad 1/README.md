@@ -8,3 +8,7 @@
   <li>Al final se muestran 4 versiones de la imagen, donde a cada una se le aplica un filtro.</li>
   <li><strong>IMPORTANTE:</strong> Es necesario tener las librerías: OpenCV, Matplotlib, OS y Numpy.</li>
 </ul>
+
+<h2>Casos de Prueba:</h2>
+
+![image](https://github.com/user-attachments/assets/6d7b1f9d-9585-4a85-ac7c-3d2a09471a52)
