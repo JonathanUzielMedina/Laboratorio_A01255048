@@ -9,6 +9,13 @@
   <li><strong>IMPORTANTE:</strong> Es necesario tener las librerías: OpenCV, Matplotlib, OS y Numpy.</li>
 </ul>
 
+<h2>Función creada:</h2>
+<strong>convolución():</strong> Esta función aplica un filtro de convolución a una imagen.
+La precondición es que haya una matriz de imagen válida. Las entradas son las matrices de la imagen y del filtro de convolución.
+La salida es la matriz de la imagen con el filtro aplicado. La postcondición es que la imagen tenga el filtro aplicado.
+Su complejidad es O(n<sup>4</sup>) porque recorre n columnas de n filas de la matriz de la imagen y al recorrer las columnas se
+recorren n columnas de n filas del filtro y del fragmento de la imagen a procesar.
+
 <h2>Casos de Prueba:</h2>
 
 <table>
