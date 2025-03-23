@@ -123,13 +123,13 @@ if __name__ == "__main__":
 Referencias:
 
 - Función de convolución. (s. f.). ArcGIS Desktop. Recuperado el 20 de marzo de 2025 de https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/convolution-function.htm
-- GeeksforGeeks. (2020, 22 abril). Matplotlib.pyplot.imshow() in Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/matplotlib-pyplot-imshow-in-python/
-- GeeksforGeeks. (2022, 10 febrero). How to Fix: ValueError: setting an array element with a sequence. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/how-to-fix-valueerror-setting-an-array-element-with-a-sequence/
-- GeeksforGeeks. (2023, 14 marzo). Introduction to Convolutions using Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/introduction-to-convolutions-using-python/
-- GeeksforGeeks. (2024, 24 abril). Python - How to Check if a file or directory exists. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/python-check-if-a-file-or-directory-exists/
-- GeeksforGeeks. (2024, 2 agosto). Python OpenCV | cv2.imread() method. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/python-opencv-cv2-imread-method/
-- GeeksforGeeks. (2024, 25 noviembre). How to display multiple images in one figure correctly in Matplotlib? GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/how-to-display-multiple-images-in-one-figure-correctly-in-matplotlib/
-- GeeksforGeeks. (2025, 24 enero). Numpy.zeros() in Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/numpy-zeros-python/
+- GeeksforGeeks. (2020a, 22 abril). Matplotlib.pyplot.imshow() in Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/matplotlib-pyplot-imshow-in-python/
+- GeeksforGeeks. (2022b, 10 febrero). How to Fix: ValueError: setting an array element with a sequence. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/how-to-fix-valueerror-setting-an-array-element-with-a-sequence/
+- GeeksforGeeks. (2023c, 14 marzo). Introduction to Convolutions using Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/introduction-to-convolutions-using-python/
+- GeeksforGeeks. (2024d, 24 abril). Python - How to Check if a file or directory exists. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/python-check-if-a-file-or-directory-exists/
+- GeeksforGeeks. (2024e, 2 agosto). Python OpenCV | cv2.imread() method. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/python-opencv-cv2-imread-method/
+- GeeksforGeeks. (2024f, 25 noviembre). How to display multiple images in one figure correctly in Matplotlib? GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/how-to-display-multiple-images-in-one-figure-correctly-in-matplotlib/
+- GeeksforGeeks. (2025g, 24 enero). Numpy.zeros() in Python. GeeksforGeeks. Recuperado el 20 de marzo de 2025 de https://www.geeksforgeeks.org/numpy-zeros-python/
 - 8.2 Matriz de convolución. (s. f.). GIMP. https://docs.gimp.org/2.6/es/plug-in-convmatrix.html
 - Olvera, B. (s. f.). Convolución [Diapositivas; Digital]. Tecnológico de Monterrey. https://experiencia21.tec.mx/courses/554652/discussion_topics/3503409
 - Olvera, B. (s. f.). Procesamiento de Imágenes y Visión Computacional [Diapositivas; Digital]. Tecnológico de Monterrey. https://experiencia21.tec.mx/courses/554652/discussion_topics/3503409
