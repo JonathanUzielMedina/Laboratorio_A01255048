@@ -20,7 +20,7 @@ import os
 import time
 import matplotlib.pyplot as plt
 
-# Función para agregar un filtro de convolución a una imagen.
+# Función para agregar un filtro de convolución a una imagen. Complejidad O(n^2) al recorrer n columnas de n filas.
 def convolucion(imagen, filtro, padding_y=1, padding_x=1):
     filaImg, colImg = imagen.shape
     filaF, colF = filtro.shape
@@ -41,7 +41,10 @@ def convolucion(imagen, filtro, padding_y=1, padding_x=1):
 
     return matriz
 
-# Función para guardar la imagen en la carpeta "Fotos"
+"""
+Función para guardar la imagen en la carpeta "Fotos". Complejidad O(1) al no tener iteraciones;
+solo hay un condicional y llamadas a funciones.
+""" 
 def guardar_imagen(imagen, nombre_imagen):
     if not os.path.exists('Fotos'):
         os.makedirs('Fotos')
