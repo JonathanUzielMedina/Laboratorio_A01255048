@@ -18,7 +18,7 @@ import numpy as np
 import cv2
 import os
 import time
-import matplotlib.pyplot as plt
+import matplotlib as plt
 
 # Función para agregar un filtro de convolución a una imagen. Complejidad O(n^2) al tener 2 iteraciones anidadas.
 def convolucion(imagen, filtro):
