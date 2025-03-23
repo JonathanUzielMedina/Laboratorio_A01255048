@@ -11,4 +11,37 @@
 
 <h2>Casos de Prueba:</h2>
 
-![image](https://github.com/user-attachments/assets/6d7b1f9d-9585-4a85-ac7c-3d2a09471a52)
+<table>
+  <thead>
+    <th># Caso</th>
+    <th>Nombre del Archivo</th>
+    <th>Salida</th>
+    <th>Propósito</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>minidv.jpg</td>
+      <td><img src="https://github.com/user-attachments/assets/6d7b1f9d-9585-4a85-ac7c-3d2a09471a52" width="650"></td>
+      <td>En este caso se demuestra cómo de utilizarse este programa correctamente.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>fundas.jpg</td>
+      <td><img src="https://github.com/user-attachments/assets/7525af06-3dbe-4abf-948b-e9c0fd8c1595" width="650"></td>
+      <td>En este caso se demuestra que este programa funciona con cualquier otra imagen.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>minidv</td>
+      <td>No se pudo encontrar la imagen.</td>
+      <td>En este caso se demuestra que es necesario ingresar la extensión del archivo de la imagen para poder encontrarla.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>asdsdgdffd</td>
+      <td>No se pudo encontrar la imagen.</td>
+      <td>En este caso se demuestra que es necesario ingresar el nombre de una imagen que sí exista y esté en la misma carpeta.</td>
+    </tr>
+  </tbody>
+</table>
