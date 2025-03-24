@@ -4,13 +4,14 @@ Herramientas Computacionales: El Arte de la Programación
 Evidencia de Proyecto
 
 Equipo: Jonathan Uziel Medina Rodríguez (A01255048), Pablo Ernesto Cruz Moreno (A01255437) y
-        Miguel de Jesús Degollado Macías (A01255388@).
+        Miguel de Jesús Degollado Macías (A01255388).
 
 Docente: Baldomero Olvera Villanueva
 
 Fecha: 23/03/2025
 
-Descripción: Programa que aplica filtros de convolución a una radiografía para detectar cuerpos extraños, enfermedades respiratorias, etc.
+Descripción: Programa que aplica filtros de convolución a una radiografía para detectar cuerpos extraños,
+             enfermedades respiratorias, etc.
 """
 
 # Librerías
@@ -20,32 +21,51 @@ import os
 import time
 import matplotlib.pyplot as plt
 
-# Función para agregar un filtro de convolución a una imagen.
+# Función para agregar un filtro de convolución a una imagen. Complejidad O(n^2) al recorrer n columnas de n filas.
 def convolucion(imagen, filtro, padding_y=1, padding_x=1):
+    # Filas y columnas de la imagen.
     filaImg, colImg = imagen.shape
+
+    # Filas y columnas del filtro.
     filaF, colF = filtro.shape
 
-    # Si no se especifica padding, se usa el valor por defecto
+    # Si no se especifica padding, se usa el valor por defecto.
     padding_y = int((filaF - 1) / 2) if padding_y is None else padding_y
     padding_x = int((colF - 1) / 2) if padding_x is None else padding_x
 
+    # Matriz de ceros con el tamaño de la imagen.
     matriz = np.zeros(imagen.shape)
+
+    # Matriz de ceros con el tamaño de la imagen más el padding.
     imagenPadding = np.zeros((filaImg + (padding_y * 2), colImg + (padding_x * 2)))
 
+    # Toda la parte que no abarca el padding será abarcada por la imagen.
     imagenPadding[padding_y:imagenPadding.shape[0] - padding_y,
                   padding_x:imagenPadding.shape[1] - padding_x] = imagen
 
+    # Recorrer n filas de la imagen.
     for i in range(filaImg):
+        # Recorrer n columnas de la imagen.
         for j in range(colImg):
+            # Operación de convolución en cada celda.
             matriz[i][j] = np.sum(imagenPadding[i:i + filaF, j:j + colF] * filtro)
 
+    # Matriz con filtros aplicados.
     return matriz
 
-# Función para guardar la imagen en la carpeta "Fotos"
+
+"""
+Función para guardar la imagen en la carpeta "Fotos". Complejidad O(1) al no tener iteraciones;
+solo hay un condicional y llamadas a funciones.
+""" 
 def guardar_imagen(imagen, nombre_imagen):
+    # Checar si existe la carpeta "Fotos".
     if not os.path.exists('Fotos'):
         os.makedirs('Fotos')
+    
+    # Crear la imagen.
     cv2.imwrite(f'Fotos/{nombre_imagen}.png', imagen)
+
 
 # Programa principal
 if __name__ == "__main__":
@@ -53,13 +73,18 @@ if __name__ == "__main__":
     # Ingresar nombre o directorio del archivo.
     archivo = input("\nIngrese el nombre de la imagen: ")
 
+    # Checar si la imagen existe.
     if os.path.isfile(archivo) == False:
         print("\nNo se pudo encontrar la imagen.")
+    
     else:
-
+        # Mapas de color admitidos por el programa.
         colorMapArr = ["bone", "afmhot", "gray"]
+        
+        # Mapa de color ingresado por el usuario.
         colorMap = ""
 
+        # Mientras no se ha ingresado un nombre de mapa de color válido, se le pide que ingrese uno válido. 
         while colorMap not in colorMapArr:
             colorMap = input("\nIngrese el nombre del mapa de color que quiera utilizar:\n"
                             "\t1. bone\n"
@@ -74,7 +99,7 @@ if __name__ == "__main__":
             else:
                 break
 
-        # Solicitar al usuario tipo y cantidad de padding
+        # Solicitar al usuario tipo y cantidad de padding.
         padding_y = int(input("\nIngrese la cantidad de padding en el eje Y (por defecto 1): ") or 1)
         padding_x = int(input("\nIngrese la cantidad de padding en el eje X (por defecto 1): ") or 1)
 
@@ -84,7 +109,7 @@ if __name__ == "__main__":
         # La imagen se convierte a blanco y negro (escala de grises).
         imagenEG = cv2.cvtColor(imagen, cv2.COLOR_RGB2GRAY)
 
-        # Matrices de filtros
+        # Matrices de filtros.
         bordes = np.array([[-1, 0, -1],
                            [-1, -3, -1],
                            [-1, 0, -1]])
@@ -129,6 +154,8 @@ if __name__ == "__main__":
         # Guardar la imagen procesada
         guardar_imagen(mascara4, "Imagen_Procesada")
         print("\nLa imagen filtrada ha sido guardada en la carpeta 'Fotos'.")
+
+
 """
 Referencias:
 
